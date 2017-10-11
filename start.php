@@ -13,12 +13,16 @@
 			margin:0 auto;
 		}
 
+		h1{
+			position: relative;
+			text-align: center;
+			margin-top: 10%;
+		}
+
 		td{
 			border: 1px solid black;
 			height: 20px;
 			width: 20px;
-			background-image: Imagenes/joker.jpeg
-			background-repeat: no-repeat;
 		}
 
 		table{
@@ -28,6 +32,15 @@
 			height: 100px;
 		}
 
+		form{
+			position: relative;
+			text-align: center;
+		}
+
+		.container{
+			position: relative;
+		}
+
 	</style>
 
 </head>
@@ -35,8 +48,6 @@
 <body>
 <?php
 	echo"<form method='post' action='indice.php'> 
-		<input name='filas'>
-		<input name='celdas'>
 		<button type='submit'>Crear</button>
 		</form>"
 ?>
