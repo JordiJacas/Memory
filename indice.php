@@ -1,3 +1,7 @@
+<head>
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
 <?php
 
 	function crea_table(){
@@ -15,9 +19,10 @@
 	        echo "<tr>";
 
 	        for($j=1; $j<=$celdas; $j++) {
-	        	echo "<td><div class='container' onclick='flip($contador)'>
-	        			<img src='Imagenes/$array[$contador]' width=120 height=150>
-	        			<img src='Imagenes/fondo.jpg'width=120 height=150>
+	        	echo "<td><div class='container'>
+	        			<img src='img/$array[$contador]' width=120 height=150 id=$j.'_1' class='back'>
+	        			<img src='img/fondo.jpg' width=120 height=150 id =$j.'_2' class='front'
+	        			onclick='flip($contador.'_')'>
 	        		 </td>";
 
 	        	$contador++;
@@ -31,3 +36,4 @@
 
 	crea_table();
 ?>
+</body>
