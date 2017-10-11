@@ -2,8 +2,12 @@
 
 	function crea_table(){
 
-		$filas = $_POST["filas"];
-		$celdas = $_POST["celdas"];
+		$filas = 4;
+		$celdas = 3;
+		$contador = 0;
+
+		$array = array('cabeza.jpg', 'cabeza.jpg','brazo.jpg', 'brazo.jpg', 'pierna1.jpg', 'pierna1.jpg', 'brazo2.jpg', 'brazo2.jpg', 'pierna2.jpg', 'pierna2.jpg', 'dragon.jpg', 'dragon.jpg');
+		shuffle($array);
 
 	    echo "<table>";
 
@@ -11,8 +15,13 @@
 	        echo "<tr>";
 
 	        for($j=1; $j<=$celdas; $j++) {
-	        	echo "<td><img src='Imagenes/joker.jpeg' width=100 height=100></img></td>";
-	       
+	        	echo "<td><div class='container' onclick='flip($contador)'>
+	        			<img src='Imagenes/$array[$contador]' width=120 height=150>
+	        			<img src='Imagenes/fondo.jpg'width=120 height=150>
+	        		 </td>";
+
+	        	$contador++;
+	       		
 		    }	
 		    echo"</tr>";
 		}
