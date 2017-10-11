@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.flip{width: 240px; height: 200px; margin: 10px; float: left;}
+		.flip > .front{position: absolute; -webkit-transform: perspective(600px) rotateY(0deg);
+			transform: perspective(600px) rotateY(0deg);
+			background #fCO; width: 200px;height: 200px; border-radius: 7px;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			transition: webkit-transform .5s linear 0s;
+			transition: transform .5s linear 0s;
+			background-color: yellow;
+		}
+
+		.flip > .back{position: absolute; -webkit-transform: perspective(600px) rotateY(180deg);
+			transform: perspective(600px) rotateY(180deg);
+			background #fCO; width: 200px;height: 200px; border-radius: 7px;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			transition: webkit-transform .5s linear 0s;
+			transition: transform .5s linear 0s;
+			background-color: blue;
+		}
+
+		.flip > .frontFlip{
+			position: absolute; -webkit-transform: perspective(600px) rotateY(-180deg);
+			transform: perspective(600px) rotateY(-180deg);
+			background #fCO; width: 200px;height: 200px; border-radius: 7px;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			transition: webkit-transform .5s linear 0s;
+			transition: transform .5s linear 0s;
+			background-color: yellow;
+		}
+
+		.flip > .backFlip{
+			position: absolute; -webkit-transform: perspective(600px) rotateY(0deg);
+			transform: perspective(600px) rotateY(0deg);
+			background #fCO; width: 200px;height: 200px; border-radius: 7px;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			transition: webkit-transform .5s linear 0s;
+			transition: transform .5s linear 0s;
+			background-color: blue;
+		}
+
+	</style>
+	<script src="script.js"></script>
+</head>
+<body id="body">
+	<div class="flip">
+		<div id="1_1" class="back">back</div>
+		<div id ="1_2" class="front" onclick="flip('1_')">front</div>
+	</div>
+	<div class="flip">
+		<div id="2_1" class="back">detras</div>
+		<div id ="2_2" class="front" onclick="flip('2_')">front</div>
+	</div>
+	<div class="flip">
+		<div id="3_1" class="back">back</div>
+		<div id ="3_2" class="front" onclick="flip('3_')">front</div>
+	</div>
+
+	<p id = "demo"></p>
+</body>
+</html>
