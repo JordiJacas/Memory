@@ -13,10 +13,10 @@
 </head>
 
 <body>
-<?php
-	echo"<form method='post' action='indice.php'> 
-		<button type='submit'>Crear</button>
-		</form>"
+<?php include 'indice.php';
+	
+	crea_table();
+	
 ?>
 
 </body>
