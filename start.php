@@ -14,6 +14,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 	<div id="block"></div>
     <button class="button" type="button" value="Jugar" onclick="visible()">Jugar</button>
     <button class="button2" type="button" value="Reiniciar" onclick="">Reiniciar</button>

@@ -11,7 +11,7 @@
 
 	function crea_table(){
 		$filas = 3;
-		$celdas = 4;
+		$celdas = 4;	
 		$contador = 0;
 		$cont = 1;
 		$array = array('cabeza.jpg', 'cabeza.jpg','brazo.jpg', 'brazo.jpg', 'pierna1.jpg', 'pierna1.jpg', 'brazo2.jpg', 'brazo2.jpg', 'pierna2.jpg', 'pierna2.jpg', 'dragon.jpg', 'dragon.jpg');
@@ -33,8 +33,36 @@
 		}
 		echo "</table>";
 	}
-	
+
+	function classificacio(){
+		
+		$class = array(array("Manu"=>32), array("Juan"=>42), array("Pas"=>34));
+		//$class[nombre] = puntos;
+		arsort($class);
+
+
+		echo"<table>";
+			echo "<tr>	
+					<td>Nom</td>
+					<td>Punts</td>
+				  </tr>";
+		for($v=0;$v<=3;$v++){
+			echo "<tr>
+					<td>".key($class[$v])."</td>
+					<td>".$class[$v][key($class[$v])]."</td>
+				</tr>";
+		}
+		echo"</table>";
+	}
 ?>
 
+<?php
+	$mov = $_POST['ola'];
+	echo "ola".$mov;
+?>
+	<form action=" " method="post">
+		<div id='demo' name="test">30</div>
+		<input type="text" name="ola">
+	<form>
 
 </body>
