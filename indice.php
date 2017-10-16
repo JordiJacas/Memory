@@ -56,8 +56,4 @@
 	}
 ?>
 
-<?php
-	$mov = $_POST['ola'];
-?>
-
 </body>

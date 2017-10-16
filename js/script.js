@@ -58,5 +58,4 @@ function visible(){
 	document.getElementById("tabla").style.marginLeft = "25%";
 	document.getElementById("tabla").style.top = "170px";
 	document.getElementsByTagName("UL")[0].style.visibility = "hidden";
-
 }
