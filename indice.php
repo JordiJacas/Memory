@@ -58,11 +58,6 @@
 
 <?php
 	$mov = $_POST['ola'];
-	echo "ola".$mov;
 ?>
-	<form action=" " method="post">
-		<div id='demo' name="test">30</div>
-		<input type="text" name="ola">
-	<form>
 
 </body>
