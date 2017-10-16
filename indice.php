@@ -1,12 +1,10 @@
 <head>
 	<link href="css/style.css" rel="stylesheet">
-	<link href="css/start.css" rel="stylesheet">
 	<script src="js/script.js"></script>
-
 </head>
 <body>
 
-
+<div id="block"></div>
 <?php
 
 	function crea_table(){

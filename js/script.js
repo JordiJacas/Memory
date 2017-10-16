@@ -48,7 +48,7 @@ function nFlip(){
 }
 
 function printInt(a){
-    document.getElementById("mov").innerHTML = mov;
+    document.getElementById("mov").innerHTML = "Movimientos: "+mov;
 }
 
 
@@ -58,4 +58,20 @@ function visible(){
 	document.getElementById("tabla").style.marginLeft = "25%";
 	document.getElementById("tabla").style.top = "170px";
 	document.getElementsByTagName("UL")[0].style.visibility = "hidden";
+}
+
+function restart(){
+	var mov = 0;
+	var cards = 0;
+	var myvar;
+	var id = [];
+
+	var x = document.getElementsByClassName("backFlip");
+	var z = document.getElementsByClassName("frontFlip");
+	var i;
+	for (i = 0; i < x.length; i++) {
+	    z[i].className = "front";
+	    x[i].className = "back";
+	}
+
 }
