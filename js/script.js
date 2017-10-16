@@ -48,5 +48,15 @@ function nFlip(){
 }
 
 function printInt(a){
-    document.getElementById("demo").innerHTML = mov;
+    document.getElementById("mov").innerHTML = mov;
+}
+
+
+
+function visible(){
+	document.getElementById("tabla").style.visibility = "visible";
+	document.getElementById("tabla").style.marginLeft = "25%";
+	document.getElementById("tabla").style.top = "80px";
+	document.getElementsByTagName("UL")[0].style.visibility = "hidden";
+
 }
