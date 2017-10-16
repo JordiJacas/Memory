@@ -1,6 +1,12 @@
 .flip{
+<<<<<<< HEAD
 	width: 152px;
 	height: 152px; 
+=======
+	position: relative;
+	width: 150px;
+	height: 150px; 
+>>>>>>> c21fe3248cd60e2a762f3d699dc3b1fdd52d4fce
 
 }
 
@@ -45,7 +51,7 @@
 }
 
 img{
+	position: relative;
+	top: -5px;
 
-	width: 25px;
-	height: 25px;
 }
