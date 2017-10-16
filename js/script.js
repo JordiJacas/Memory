@@ -1,7 +1,7 @@
 var mov = 0;
 var cards = 0;
-var myvar;
 var id = [];
+
 
 function flip(e){	
 		document.getElementById(e+"_1").className = "backFlip";
@@ -53,25 +53,28 @@ function printInt(a){
 
 
 
-function visible(){
-	document.getElementById("tabla").style.visibility = "visible";
-	document.getElementById("tabla").style.marginLeft = "25%";
-	document.getElementById("tabla").style.top = "170px";
+// function visible(){
+	// document.getElementById("tabla").style.visibility = "visible";
+	// document.getElementById("tabla").style.marginLeft = "25%";
+	// document.getElementById("tabla").style.top = "170px";
 	document.getElementsByTagName("UL")[0].style.visibility = "hidden";
-}
+// }
 
 function restart(){
-	var mov = 0;
-	var cards = 0;
-	var myvar;
-	var id = [];
+	mov = 0;
+	cards = 0;
+	id = [];
 
-	var x = document.getElementsByClassName("backFlip");
-	var z = document.getElementsByClassName("frontFlip");
-	var i;
-	for (i = 0; i < x.length; i++) {
-	    z[i].className = "front";
-	    x[i].className = "back";
-	}
-
+	// var x = document.getElementsByClassName("backFlip");
+	// var z = document.getElementsByClassName("frontFlip");
+	// var i;
+	// for (i = 0; i < x.length; i++) {
+	    // z[i].className = "front";
+	    // x[i].className = "back";
+	// }
+	
+	location.reload(true);
 }
+
+
+

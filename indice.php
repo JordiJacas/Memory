@@ -4,9 +4,7 @@
 </head>
 <body>
 
-<div id="block"></div>
 <?php
-
 	function crea_table(){
 		$filas = 3;
 		$celdas = 4;	
@@ -36,22 +34,20 @@
 		
 		$class = array(array("Manu"=>32), array("Juan"=>42), array("Pas"=>34));
 		//$class[nombre] = puntos;
-		arsort($class);
-
-
+		sort($class);
+		
 		echo"<table>";
 			echo "<tr>	
-					<td>Nom</td>
-					<td>Punts</td>
+					<th>Nom</th>
+					<th>Punts</th>
 				  </tr>";
-		for($v=0;$v<=3;$v++){
+		for($v=0;$v<=2;$v++){
 			echo "<tr>
-					<td>".key($class[$v])."</td>
-					<td>".$class[$v][key($class[$v])]."</td>
+					<td class='rank'>".key($class[$v])."</td>
+					<td class='rank'>".$class[$v][key($class[$v])]."</td>
 				</tr>";
 		}
 		echo"</table>";
 	}
 ?>
-
 </body>

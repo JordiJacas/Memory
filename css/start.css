@@ -9,16 +9,9 @@ h1{
   	padding: 5px;
 }
 
-.button{
-	
-
-}
-
 #button{
 	margin-left: 43%;
 }
-
-
 
 li{
 	padding-top: 15px;
@@ -30,13 +23,16 @@ body{
 }
 
 #pie{
-	margin-top: 25%;
+	margin-top: 30%;
 	text-align: center;
 }
 
 #tabla{
 	position: absolute;
-	visibility: hidden;
+	visibility: visible;
+	top: 20%;
+	margin-left: 31.5%;
+	
 }
 
 #block{
@@ -57,4 +53,28 @@ body{
 	position: absolute;
 	top: -5%;
 	right: 2px;
+}
+
+#ranking > table{
+	width: 200px;
+	height: 100px;
+
+}
+
+#ranking{
+	position: absolute;
+	float: right;
+	top: 20%;
+	margin-left: 25%;
+	display: inline-block;
+}
+
+.rank{
+	background-color: white;
+	text-align: center;
+}
+
+th{
+
+	margin-bottom: 5px;
 }

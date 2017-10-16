@@ -9,6 +9,7 @@
 	<p><h1>Memory</h1></p>
 	<link href="css/start.css" rel="stylesheet">
 	<script src="js/script.js"></script>
+	
 
 
 </head>
@@ -29,7 +30,14 @@
 
 </div>
 
-<ul>
+<div id="ranking">
+	<?php 
+		classificacio();
+	?>
+
+</div>
+
+<!--<ul>
 	<li><i>El juego consiste en un número par de fichas con imágenes de un lado y un reverso genérico. Cada imagen aparece en precisamente dos fichas.</li></i>
 
 	<li><i>Cuando empieza el juego, todas las fichas están volteadas boca abajo.</li></i>
@@ -38,7 +46,7 @@
 
 	<li><i>El objetivo del juego es conseguir todas las fichas volteadas boca arriba (es decir, encontrar todos los pares de imágenes que coincidan) en el menor número de intentos. Eso significa que el menor número de intentos es una mejor puntuación.</li></i>
 
-</ul>
+</ul>-->
 
 <p id="pie">Copyright © 2017-2018 Interactive Programmers Community - Todos los derechos reservados</p>
 
