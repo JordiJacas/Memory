@@ -10,9 +10,15 @@ h1{
 }
 
 .button{
-	margin-left: 43%;
+	
 
 }
+
+#button{
+	margin-left: 43%;
+}
+
+
 
 li{
 	padding-top: 15px;
@@ -29,10 +35,8 @@ body{
 }
 
 #tabla{
-	position: absolute;
+	position: relative;
 	visibility: hidden;
-	top: 0;
-	margin-left: 0;
 }
 
 #block{
@@ -53,3 +57,6 @@ body{
 	position: absolute;
 	margin-top: -100px;
 }
+
+img{width: 25px;
+height: 25px;}

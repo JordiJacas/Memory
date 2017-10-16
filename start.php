@@ -15,8 +15,8 @@
 
 <body>
 	<div id="block"></div>
-    <button class="button" type="button" value="Jugar" onclick="visible()">Jugar</button>
-    <button class="button2" type="button" value="Reiniciar" onclick="">Reiniciar</button>
+    <button class="button" id="button" type="button" value="Jugar" onclick="visible()">Jugar</button>
+    <button class= "button" id="button2" type="button" value="Reiniciar" onclick="restart()">Reiniciar</button>
 
 <div id="tabla">
 	<?php include 'indice.php';

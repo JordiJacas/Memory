@@ -1,7 +1,6 @@
 .flip{
 	width: 152px;
-	height: 152px;
-	margin: 5px; 
+	height: 152px; 
 
 }
 
@@ -43,4 +42,10 @@
 		backface-visibility: hidden;
 		transition: webkit-transform .5s linear 0s;
 		transition: transform .5s linear 0s;
+}
+
+img{
+
+	width: 25px;
+	height: 25px;
 }
