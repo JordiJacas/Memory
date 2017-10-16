@@ -14,7 +14,7 @@
 		$celdas = 4;	
 		$contador = 0;
 		$cont = 1;
-		$array = array('cabeza.jpg', 'cabeza.jpg','brazo.jpg', 'brazo.jpg', 'pierna1.jpg', 'pierna1.jpg', 'brazo2.jpg', 'brazo2.jpg', 'pierna2.jpg', 'pierna2.jpg', 'dragon.jpg', 'dragon.jpg');
+		$array = array('mago.jpg', 'mago.jpg','obelix.jpg', 'obelix.jpg', 'slifer.jpg', 'slifer.jpg', 'ra.jpg', 'ra.jpg', 'craneo.jpg', 'craneo.jpg', 'dragon.jpg', 'dragon.jpg');
 		shuffle($array);
 
 	    echo "<table>";
