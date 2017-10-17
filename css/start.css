@@ -54,6 +54,11 @@ body{
 	top: -5%;
 	right: 2px;
 }
+#nm{
+	position: absolute;
+	top: -5%;
+	left: 5px;
+}
 
 #ranking > table{
 	width: 200px;
@@ -64,9 +69,10 @@ body{
 #ranking{
 	position: absolute;
 	float: right;
-	top: 20%;
+	top: 25%;
 	margin-left: 25%;
 	display: inline-block;
+	visibility: hidden;
 }
 
 .rank{
@@ -78,3 +84,17 @@ th{
 
 	margin-bottom: 5px;
 }
+
+#points, #name{
+	visibility: hidden;
+	z-index: -1;	
+}
+
+#save{
+	position: absolute;
+	top: 18.8%;
+	margin-left: 17.3%;
+}
+
+
+

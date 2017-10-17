@@ -1,8 +1,9 @@
+//Variables 
 var mov = 0;
 var cards = 0;
 var id = [];
 
-
+//Funcion para girar la carta boca abajo que se ha seleccionado.
 function flip(e){	
 		document.getElementById(e+"_1").className = "backFlip";
 		document.getElementById(e+"_2").className = "frontFlip";
@@ -12,6 +13,7 @@ function flip(e){
 		numCards(cards);
 }
 
+//Cuenta las cartas y las compara, tambien suma los movimientos del usuario.
 function numCards(cards){
 	
 	if(cards%2==0){
@@ -34,7 +36,8 @@ function numCards(cards){
 	printInt(mov);
 	complet();
 }
-	
+
+//Vuelve a girar las cartas boca arriba.
 function nFlip(){
 
 		document.getElementById(id[0]).className = "back";
@@ -48,30 +51,42 @@ function nFlip(){
 		document.getElementById("block").style.visibility = "hidden";
 }
 
+//Muestra los movimientos que ha realizado el usuario.
 function printInt(a){
     document.getElementById("mov").innerHTML = "Movimientos: "+a;
+    document.getElementById("points").value = mov;
 }
 
 
-
+//Mostrar y posicionar la tabla.
 function visible(){
 	document.getElementById("tabla").style.visibility = "visible";
 	document.getElementById("tabla").style.marginLeft = "25%";
-	document.getElementById("tabla").style.top = "160px";
+	document.getElementById("tabla").style.top = "28%";
 	document.getElementsByTagName("UL")[0].style.visibility = "hidden";
+	document.getElementById("ranking").style.visibility = "visible";
+
+	nombre();
 }
 
+//Reinicia la pagina con los valores predeterminados.
 function restart(){
-	mov = 0;
-	cards = 0;
-	id = [];
 
 	location.reload(true);
 }
 
+//Cuando estan todas las cartas boca arriba, salga un mensaje de que ya has acabado.
 function complet(){
 	var x = document.getElementById("tabla");
     var y = x.getElementsByClassName("frontFlip").length;
 	if(y==12){alert("Has acabat!")};
 }
 
+//Introducir el nombre.
+function nombre(){
+	var person= prompt("Introduce tu nombre: ");
+	if(person!=null){
+		document.getElementById("name").value = person;
+		document.getElementById("nm").innerHTML = person;
+	}
+}
