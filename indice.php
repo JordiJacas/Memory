@@ -30,11 +30,30 @@
 		echo "</table>";
 	}
 
+	function readPoints(){
+		$f = fopen("txt/ranking.txt","r");
+		
+		$array2 = array();
+
+		while(!feof($f)) {
+		$array = array();
+		$linea = fgets($f);
+		list($name, $points) = explode('-', $linea);
+	
+		$array[$name]=(int)$points;
+
+		array_push($array2, $array);
+
+		}
+		//sort($array);
+		fclose($f);
+		return $array2;
+
+	}
+
 	function classificacio(){
 		
-		$class = array(array("Manu"=>32), array("Juan"=>42), array("Pas"=>34));
-		//$class[nombre] = puntos;
-		sort($class);
+		$class = readPoints();
 		
 		echo"<table>";
 			echo "<tr>	
@@ -48,6 +67,19 @@
 				</tr>";
 		}
 		echo"</table>";
+
+	
 	}
+
+
+	function savePoints(){
+		$f = fopen("txt/ranking.txt","a");
+		$name = $_POST['name'];
+		$points = $_POST['points'];
+
+		fwrite($f,$name."-".$points."\n");
+		fclose($f);
+	}
+	savePoints();
 ?>
 </body>

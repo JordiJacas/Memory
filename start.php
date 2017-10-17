@@ -17,16 +17,23 @@
 <body>
 	<div id="block"></div>
 
+	<form action="indice.php" method="post">
+	    <input id= "points" name= "points" value="0" type="text">
+	    <input name= "name" value="name" type="text">
+	    <input type="submit">
+    </form>
     <button class="button" id="button" type="button" value="Jugar" onclick="visible()">Jugar</button>
     <button class= "button" id="button2" type="button" value="Reiniciar" onclick="restart()">Reiniciar</button>
+
 
 
 <div id="tabla">
 	<?php include 'indice.php';
 		crea_table();
 	?>
+	
+	<div id="mov">Movimientos: 0</div>
 
-<div id="mov">Movimientos: 0</div>
 
 </div>
 

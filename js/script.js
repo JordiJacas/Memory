@@ -49,6 +49,8 @@ function nFlip(){
 
 function printInt(a){
     document.getElementById("mov").innerHTML = "Movimientos: "+mov;
+    document.getElementById("points").value = mov;
+
 }
 
 
