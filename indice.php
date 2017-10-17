@@ -39,7 +39,7 @@
 		echo"<table>";
 			echo "<tr>	
 					<th>Nom</th>
-					<th>Punts</th>
+					<th>Movimientos</th>
 				  </tr>";
 		for($v=0;$v<=2;$v++){
 			echo "<tr>

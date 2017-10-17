@@ -24,7 +24,7 @@ function numCards(cards){
 		
 		if(vcards1 != vcards2){
 			document.getElementById("block").style.visibility = "visible";
-			setTimeout(nFlip, 2000);
+			setTimeout(nFlip, 1000);
 			cards=0;
 			
 		}else{	id = [];}
@@ -32,6 +32,7 @@ function numCards(cards){
 	}
 	
 	printInt(mov);
+	complet();
 }
 	
 function nFlip(){
@@ -48,33 +49,29 @@ function nFlip(){
 }
 
 function printInt(a){
-    document.getElementById("mov").innerHTML = "Movimientos: "+mov;
+    document.getElementById("mov").innerHTML = "Movimientos: "+a;
 }
 
 
 
-// function visible(){
-	// document.getElementById("tabla").style.visibility = "visible";
-	// document.getElementById("tabla").style.marginLeft = "25%";
-	// document.getElementById("tabla").style.top = "170px";
+function visible(){
+	document.getElementById("tabla").style.visibility = "visible";
+	document.getElementById("tabla").style.marginLeft = "25%";
+	document.getElementById("tabla").style.top = "160px";
 	document.getElementsByTagName("UL")[0].style.visibility = "hidden";
-// }
+}
 
 function restart(){
 	mov = 0;
 	cards = 0;
 	id = [];
 
-	// var x = document.getElementsByClassName("backFlip");
-	// var z = document.getElementsByClassName("frontFlip");
-	// var i;
-	// for (i = 0; i < x.length; i++) {
-	    // z[i].className = "front";
-	    // x[i].className = "back";
-	// }
-	
 	location.reload(true);
 }
 
-
+function complet(){
+	var x = document.getElementById("tabla");
+    var y = x.getElementsByClassName("frontFlip").length;
+	if(y==12){alert("Has acabat!")};
+}
 

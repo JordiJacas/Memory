@@ -23,15 +23,15 @@ body{
 }
 
 #pie{
-	margin-top: 30%;
+	margin-top: 24%;
 	text-align: center;
 }
 
 #tabla{
 	position: absolute;
-	visibility: visible;
-	top: 20%;
-	margin-left: 31.5%;
+	visibility: hidden;
+	top: 30%;
+	margin-left: 25%;
 	
 }
 
