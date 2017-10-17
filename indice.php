@@ -35,22 +35,16 @@
 	//Le el archivo ranking.txt y inserta los valores dentro de una array.
 	function readPoints(){
 		$f = fopen("txt/ranking.txt","r");
-		
-		$array2 = array();
 
 		while(!feof($f)) {
-		$array = array();
-		$linea = fgets($f);
-		list($name, $points) = explode('-', $linea);
-	
-		$array[$name]=(int)$points;
-
-		array_push($array2, $array);
-
+			$linea = fgets($f);
+			
+			list($name, $points) = explode(':', $linea);
+			$array[$name]=(int)$points;
 		}
-		//sort($array);
+		arsort($array);
 		fclose($f);
-		return $array2;
+		return $array;
 
 	}
 
@@ -63,13 +57,14 @@
 			echo "<tr>	
 					<th>Nom</th>
 					<th>Movimientos</th>
-				  </tr>";
-		for($v=0;$v<=2;$v++){
+				  </tr>";		
+		foreach ($class as $clave => $valor) {
 			echo "<tr>
-					<td class='rank'>".key($class[$v])."</td>
-					<td class='rank'>".$class[$v][key($class[$v])]."</td>
+					 <td class='rank'>".$clave."</td>
+					 <td class='rank'>".$valor."</td>
 				</tr>";
 		}
+		
 		echo"</table>";	
 	}
 
@@ -79,10 +74,8 @@
 		$name = $_POST['name'];
 		$points = $_POST['points'];
 
-		fwrite($f,$name."-".$points."\n");
+		fwrite($f,"\n".$name.":".$points);
 		fclose($f);
 	}
-
-	savePoints();
 ?>
 </body>
