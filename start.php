@@ -17,7 +17,7 @@
 <body>
 	<div id="block"></div>
 
-	<form action="indice.php" method="post">
+	<form action="php/funcions.php" method="post">
 	    <input id= "points" name= "points" value="0" type="text">
 	    <input id="name" name= "name" value="name" type="text">
 	    <input id= "save" type="submit" value="Guardar">

@@ -42,7 +42,7 @@
 			list($name, $points) = explode(':', $linea);
 			$array[$name]=(int)$points;
 		}
-		arsort($array);
+		asort($array);
 		fclose($f);
 		return $array;
 
@@ -58,6 +58,7 @@
 					<th>Nom</th>
 					<th>Movimientos</th>
 				  </tr>";		
+		
 		foreach ($class as $clave => $valor) {
 			echo "<tr>
 					 <td class='rank'>".$clave."</td>
@@ -66,16 +67,6 @@
 		}
 		
 		echo"</table>";	
-	}
-
-	//Guarda los puntos y nombre de la partida.
-	function savePoints(){
-		$f = fopen("txt/ranking.txt","a");
-		$name = $_POST['name'];
-		$points = $_POST['points'];
-
-		fwrite($f,"\n".$name.":".$points);
-		fclose($f);
-	}
+	}	
 ?>
 </body>
