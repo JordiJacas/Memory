@@ -27,7 +27,7 @@
 
 
 <div id="tabla">
-	<?php include 'indice.php';
+	<?php include 'php/indice.php';
 		crea_table();
 	?>
 	<div id="nm">Nombre</div>
