@@ -9,15 +9,12 @@
 	<p><h1>Memory</h1></p>
 	<link href="css/start.css" rel="stylesheet">
 	<script src="js/script.js"></script>
-	
-
-
 </head>
 
 <body>
 	<div id="block"></div>
 
-	<form action="indice.php" method="post">
+	<form action="php/funcions.php" method="post">
 	    <input id= "points" name= "points" value="0" type="text">
 	    <input id="name" name= "name" value="name" type="text">
 	    <input id= "save" type="submit" value="Guardar">
@@ -35,8 +32,6 @@
 	?>
 	<div id="nm">Nombre</div>
 	<div id="mov">Movimientos: 0</div>
-
-
 </div>
 
 <div id="ranking">
