@@ -42,7 +42,7 @@
 		$array = array();
 		$linea = fgets($f);
 		list($name, $points) = explode('-', $linea);
-	
+		
 		$array[$name]=(int)$points;
 
 		array_push($array2, $array);
@@ -50,7 +50,7 @@
 		}
 		//sort($array);
 		fclose($f);
-		return $array2;
+		print_r($array2);
 
 	}
 
@@ -83,6 +83,6 @@
 		fclose($f);
 	}
 
-	savePoints();
+	readPoints();
 ?>
 </body>
