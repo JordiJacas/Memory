@@ -1,4 +1,3 @@
-hola:103
-como:45 
-manuel:78
-oooo:1olalalal:3
+Jordi:3
+Alejandro:3
+genis:1

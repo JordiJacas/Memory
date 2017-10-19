@@ -38,15 +38,15 @@
 
 		while(!feof($f)) {
 			$linea = fgets($f);
-			list($name, $points) = explode(':', $linea);
-			$array[$name]=(int)$points;
-
+			if(!empty($linea )){
+				list($name, $points, $s) = explode(':', $linea);
+				$array[$name]=(int)$points;
+			}
 		}
 
 		asort($array);
 		fclose($f);
 		return $array;
-
 
 	}
 
