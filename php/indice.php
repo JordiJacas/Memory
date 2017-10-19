@@ -39,7 +39,7 @@
 		while(!feof($f)) {
 			$linea = fgets($f);
 			if(!empty($linea )){
-				list($name, $points, $s) = explode(':', $linea);
+				list($name, $points) = explode(':', $linea);
 				$array[$name]=(int)$points;
 			}
 		}
