@@ -26,7 +26,8 @@ function numCards(cards){
 		
 		if(vcards1 != vcards2){
 			document.getElementById("block").style.visibility = "visible";
-			setTimeout(nFlip, 1000);
+			document.getElementById("myAudio").play(); 
+			setTimeout(nFlip, 1500);
 			cards=0;
 			
 		}else{	id = [];}
@@ -90,3 +91,4 @@ function nombre(){
 		document.getElementById("nm").innerHTML = person;
 	}
 }
+		    

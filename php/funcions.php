@@ -6,13 +6,13 @@
 			$points = $_POST['points'];
 
 			if(!fwrite($f,$name.":".$points."\n")){
-				echo "<p>error al escribir</p>";
+				echo "<p>Error al escribir</p>";
 			}else{
 				fclose($f);
 				header("Location: http://localhost/Memory/start.php");
 			}
 		}else{
-			echo "<p>error al abrir</p>";
+			echo "<p>Error al abrir</p>";
 			
 		}
 	}

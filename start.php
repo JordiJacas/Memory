@@ -12,6 +12,11 @@
 </head>
 
 <body>
+
+	<audio id="myAudio">
+	  <source src="horse.mp3" type="audio/mpeg">
+	</audio>
+
 	<div id="block"></div>
 
 	<form action="php/funcions.php" method="post">
