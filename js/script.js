@@ -61,13 +61,13 @@ function printInt(a){
 
 //Mostrar y posicionar la tabla.
 function visible(){
-	document.getElementById("tabla").style.visibility = "visible";
-	document.getElementById("tabla").style.marginLeft = "25%";
-	document.getElementById("tabla").style.top = "28%";
-	document.getElementsByTagName("UL")[0].style.visibility = "hidden";
-	document.getElementById("ranking").style.visibility = "visible";
+	 document.getElementById("tabla").style.visibility = "visible";
+	 document.getElementById("tabla").style.marginLeft = "25%";
+	 document.getElementById("tabla").style.top = "28%";
+	// document.getElementsByTagName("UL")[0].style.visibility = "hidden";
+	//document.getElementById("ranking").style.visibility = "visible";
 
-	nombre();
+
 }
 
 //Reinicia la pagina con los valores predeterminados.
@@ -90,5 +90,27 @@ function nombre(){
 		document.getElementById("name").value = person;
 		document.getElementById("nm").innerHTML = person;
 	}
+}
+
+
+var cHelp = 3;//document.getElementById("ayuda").innerHTML;
+function help(){
+
+	if(cHelp > 0){
+   		var y = document.getElementsByClassName("back").length;
+   		var frontArr = document.getElementsByClassName("front");
+   		var backArr = document.getElementsByClassName("back"); 
+   		while(frontArr.length > 1){
+   			var a = frontArr.shift();
+   			a.className = "frontFlip";		
+
+   			//var ola = document.getElementById("mov").innerHTML
+			//document.getElementById("mov").innerHTML = ola + "," + id2
+   		}
+
+   		//cHelp--;
+	}
+
+	//document.getElementById("ayuda").innerHTML = cHelp;
 }
 		    
