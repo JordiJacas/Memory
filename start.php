@@ -27,6 +27,8 @@
 	    <input id= "save" type="submit" value="Guardar">
     </form>-->
 
+    <p id="ayuda">3</p>
+
 
    <button class="button" id="button" type="button" value="Jugar"  onclick="visible()">Jugar</button>
      <!--<button class= "button" id="button2" type="button" value="Reiniciar" onclick="help()">Reiniciar</button>-->

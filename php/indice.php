@@ -19,7 +19,7 @@
 
 	    for( $i=1; $i<=$filas; $i++ ) { 
 	        echo "<tr>";
-	        for($j=1; $j<=$celdas; $j++) {
+	        for($j=1; $j<=$celdas; $j++) { 
 	        	echo "<td class='flip'>
 	        			<img src='img/".$array[$contador]."'  id='".$cont."_1' class='back'>
 						<img src='img/fondo.jpg' id ='".$cont."_2' class='front' onclick='flip(".$cont.")'>	        			
