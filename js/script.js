@@ -132,16 +132,16 @@ function help(){
 function help2(){
 	var fFlipArr = document.getElementsByClassName("frontFlip");
 	var bFlipArr = document.getElementsByClassName("backFlip");
-	var y = document.getElementsByClassName("backFlip").length;
-	var a=0;
-	var b=0
-	while(y > a){
-		var atrib = document.getElementsByClassName("backFlip")[b].getAttribute("fixed");
+	var allCards = document.getElementsByClassName("backFlip").length;
+	var count=0;
+	var nextCard=0
+	while(allCards > count){
+		var atrib = document.getElementsByClassName("backFlip")[nextCard].getAttribute("fixed");
 		if(atrib == null){
-			fFlipArr[b].className = "front";
- 	 		bFlipArr[b].className = "back"
- 	 	}else{b++}
- 	 	a++;
+			fFlipArr[nextCard].className = "front";
+ 	 		bFlipArr[nextCard].className = "back"
+ 	 	}else{nextCard++}
+ 	 	count++;
 	}
 }
 		    
