@@ -30,7 +30,16 @@ function numCards(cards){
 			setTimeout(nFlip, 1500);
 			cards=0;
 			
-		}else{	id = [];}
+		}else{
+			document.getElementById(id[0]).setAttribute("fixed", "true");
+			document.getElementById(id[1]).setAttribute("fixed", "true");
+			document.getElementById(id[2]).setAttribute("fixed", "true");
+			document.getElementById(id[3]).setAttribute("fixed", "true");
+
+			id = [];
+
+
+		}
 		
 	}
 	
@@ -55,7 +64,7 @@ function nFlip(){
 //Muestra los movimientos que ha realizado el usuario.
 function printInt(a){
     document.getElementById("mov").innerHTML = "Movimientos: "+a;
-    document.getElementById("points").value = mov;
+    //sdocument.getElementById("points").value = mov;
 }
 
 
@@ -93,24 +102,58 @@ function nombre(){
 }
 
 
-var cHelp = 3;//document.getElementById("ayuda").innerHTML;
+
 function help(){
 
+	var cHelp = document.getElementById("ayuda").innerHTML;//Obtiene el valor del objeto.
 	if(cHelp > 0){
-   		var y = document.getElementsByClassName("back").length;
+   		
    		var frontArr = document.getElementsByClassName("front");
    		var backArr = document.getElementsByClassName("back"); 
-   		while(frontArr.length > 1){
-   			var a = frontArr.shift();
-   			a.className = "frontFlip";		
 
-   			//var ola = document.getElementById("mov").innerHTML
-			//document.getElementById("mov").innerHTML = ola + "," + id2
+   		//Un bucle que mientra haya un numero mayor de cartas boca abajo continua.
+   		while(frontArr.length > 0){
+   			
+   			//Gira las cartas. 
+   			frontArr[0].className = "frontFlip";
+   			backArr[0].className = "backFlip";
    		}
 
-   		//cHelp--;
-	}
+   		setTimeout(help2, 3000);
 
-	//document.getElementById("ayuda").innerHTML = cHelp;
+   		cHelp--;
+
+   		//suma 5 a los movimientos
+   		mov = mov + 5;
+		printInt(mov);
+		document.getElementById("ayuda").innerHTML = cHelp;
+	}else{
+		alert("No puedes pedir mas ayudas")
+	}
+	
+}
+
+
+function help2(){
+	var fFlipArr = document.getElementsByClassName("frontFlip");
+	var bFlipArr = document.getElementsByClassName("backFlip");
+	var allCards = document.getElementsByClassName("backFlip").length;//cuenta todas las cartas que se muestran.
+	var count=0; //contador
+	var nextCard=0; //variable que sirve para ir a la sigiente carta si la anterior tiene el valor true en el atributo.
+
+	while(allCards > count){
+		//coje el valor del atributo fixed de la sigiente carta.
+		var atrib = document.getElementsByClassName("backFlip")[nextCard].getAttribute("fixed");
+
+		//compara el valor del atributo.
+		if(atrib == null){
+			//das la vuelta a la carta.
+			fFlipArr[nextCard].className = "front";
+ 	 		bFlipArr[nextCard].className = "back"
+ 	 	}else{
+ 	 		nextCard++
+ 	 	}
+ 	 	count++;
+	}
 }
 		    
