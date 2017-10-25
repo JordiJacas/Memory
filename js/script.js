@@ -43,7 +43,6 @@ function numCards(cards){
 			document.getElementById("error").play(); 
 			setTimeout(nFlip, 1500);
 			cards=0;
-			
 		}else{	
 		
 			document.getElementById("correcto").play();
@@ -53,8 +52,7 @@ function numCards(cards){
 			document.getElementById(id[2]).setAttribute("fixed", "true");
 			document.getElementById(id[3]).setAttribute("fixed", "true"); 
 			id = [];
-		}
-		
+		}	
 	}
 	
 	printInt(mov);
@@ -90,7 +88,6 @@ function complet(){
 		clearInterval(timer);
 		eSubmit();
 	};
-}
 
 //Reinicia la pagina con los valores predeterminados.
 function restart(){
@@ -132,10 +129,38 @@ function help(){
 		document.getElementById("ayuda").innerHTML = cHelp;
 	}else{
 		alert("No puedes pedir mas ayudas")
+	}	
+}
+
+function help(){
+
+	var cHelp = document.getElementById("ayuda").innerHTML;//Obtiene el valor del objeto.
+	if(cHelp > 0){
+   		
+   		var frontArr = document.getElementsByClassName("front");
+   		var backArr = document.getElementsByClassName("back"); 
+
+   		//Un bucle que mientra haya un numero mayor de cartas boca abajo continua.
+   		while(frontArr.length > 0){
+   			
+   			//Gira las cartas. 
+   			frontArr[0].className = "frontFlip";
+   			backArr[0].className = "backFlip";
+   		}
+
+   		setTimeout(help2, 3000);
+
+   		cHelp--;
+
+   		//suma 5 a los movimientos
+   		mov = mov + 5;
+		printInt(mov);
+		document.getElementById("ayuda").innerHTML = cHelp;
+	}else{
+		alert("No puedes pedir mas ayudas")
 	}
 	
 }
-
 
 function help2(){
 	var fFlipArr = document.getElementsByClassName("frontFlip");
@@ -159,3 +184,4 @@ function help2(){
  	 	count++;
 	}
 }
+

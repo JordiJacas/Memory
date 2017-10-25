@@ -1,0 +1,100 @@
+
+h1{
+	text-align: center;
+	position: relative;
+	border-top-style: solid;
+ 	border-right-style: solid;
+  	border-bottom-style: solid;
+  	border-left-style: solid;
+  	padding: 5px;
+}
+
+#button{
+	margin-left: 43%;
+}
+
+li{
+	padding-top: 15px;
+	text-align: justify-all;
+}
+
+body{
+	background-color: #d6eaf8;
+}
+
+#pie{
+	margin-top: 24%;
+	text-align: center;
+}
+
+#tabla{
+	position: absolute;
+	visibility: hidden;
+	top: 30%;
+	margin-left: 25%;
+	
+}
+
+#block{
+		width: 100%; 
+		height: 100%;
+		margin: 0px;
+		position: absolute; 
+		left: 0px; 
+		top: 0px;
+		right: 0px;
+		z-index:1000;  
+		margin: 0px;
+		padding: 0px;
+		visibility: hidden;	
+}
+
+#mov{
+	position: absolute;
+	top: -5%;
+	right: 2px;
+}
+#nm{
+	position: absolute;
+	top: -5%;
+	left: 5px;
+}
+
+#ranking > table{
+	width: 200px;
+	height: 100px;
+
+}
+
+#ranking{
+	position: absolute;
+	float: right;
+	top: 25%;
+	margin-left: 25%;
+	display: inline-block;
+	visibility: hidden;
+}
+
+.rank{
+	background-color: white;
+	text-align: center;
+}
+
+th{
+
+	margin-bottom: 5px;
+}
+
+#points, #name{
+	visibility: hidden;
+	z-index: -1;	
+}
+
+#save{
+	position: absolute;
+	top: 18.8%;
+	margin-left: 17.3%;
+}
+
+p{display: inline-block;}
+
