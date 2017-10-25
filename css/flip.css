@@ -1,0 +1,45 @@
+.flip{
+	position: relative;
+	width: 100px;
+	height: 100px; 
+}
+
+.flip > .front{
+		position: absolute; -webkit-transform: perspective(600px) rotateY(0deg);
+		transform: perspective(600px) rotateY(0deg);
+		background #fCO; border-radius: 3px;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		transition: webkit-transform .5s linear 0s;
+		transition: transform .5s linear 0s;
+}
+
+.flip > .back{
+		position: absolute; -webkit-transform: perspective(600px) rotateY(180deg);
+		transform: perspective(600px) rotateY(180deg);
+		background #fCO; border-radius: 3px;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		transition: webkit-transform .5s linear 0s;
+		transition: transform .5s linear 0s;
+}
+
+.flip > .frontFlip{
+		position: absolute; -webkit-transform: perspective(600px) rotateY(-180deg);
+		transform: perspective(600px) rotateY(-180deg);
+		background #fCO; border-radius: 3px;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		transition: webkit-transform .5s linear 0s;
+		transition: transform .5s linear 0s;
+}
+
+.flip > .backFlip{
+		position: absolute; -webkit-transform: perspective(600px) rotateY(0deg);
+		transform: perspective(600px) rotateY(0deg);
+		background #fCO; border-radius: 3px;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		transition: webkit-transform .5s linear 0s;
+		transition: transform .5s linear 0s;
+}

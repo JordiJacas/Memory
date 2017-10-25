@@ -1,6 +1,4 @@
-Jordi:3
-Alejandro:3
-genis:1name:1
-fdghjk:2
-sdfghjklkjbghvc:0
-ooooooo:4
+Alejandro:28:51
+Alejandro:11:22
+Jordi:10:19
+Genis:18:24

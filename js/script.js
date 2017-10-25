@@ -1,10 +1,26 @@
-//Variables 
+///Variables 
 var mov = 0;
 var cards = 0;
 var id = [];
+var time = 0;
+var timer;
+
+function cron(){
+	document.getElementById("time").innerHTML = time + " s";
+	document.getElementsByName("times")[0].value = time;
+	time++;
+}
+
+function start(){
+	timer = setInterval(cron, 1000);
+	document.getElementById("block").style.visibility = "hidden";
+	document.getElementById("play").style.visibility = "hidden";
+	document.getElementById("block").style.opacity = "0"
+}
 
 //Funcion para girar la carta boca abajo que se ha seleccionado.
 function flip(e){	
+		document.getElementById("giro").play(); 
 		document.getElementById(e+"_1").className = "backFlip";
 		document.getElementById(e+"_2").className = "frontFlip";
 		cards++;
@@ -18,19 +34,26 @@ function numCards(cards){
 	
 	if(cards%2==0){
 		mov++;
-		//vcards1 = document.getElementById(id[0]).innerHTML;
-		//vcards2 = document.getElementById(id[2]).innerHTML;
 	
 		vcards1 = document.getElementById(id[0]).src;
 		vcards2 = document.getElementById(id[2]).src;
 		
 		if(vcards1 != vcards2){
 			document.getElementById("block").style.visibility = "visible";
-			document.getElementById("myAudio").play(); 
+			document.getElementById("error").play(); 
 			setTimeout(nFlip, 1500);
 			cards=0;
 			
-		}else{	id = [];}
+		}else{	
+		
+			document.getElementById("correcto").play();
+			//Añadir atributo a las cartas correctas.
+			document.getElementById(id[0]).setAttribute("fixed", "true");
+			document.getElementById(id[1]).setAttribute("fixed", "true");
+			document.getElementById(id[2]).setAttribute("fixed", "true");
+			document.getElementById(id[3]).setAttribute("fixed", "true"); 
+			id = [];
+		}
 		
 	}
 	
@@ -54,20 +77,19 @@ function nFlip(){
 
 //Muestra los movimientos que ha realizado el usuario.
 function printInt(a){
-    document.getElementById("mov").innerHTML = "Movimientos: "+a;
-    document.getElementById("points").value = mov;
+    document.getElementById("mov").innerHTML = a;
+    document.getElementsByName("points")[0].value = mov;
 }
 
-
-//Mostrar y posicionar la tabla.
-function visible(){
-	document.getElementById("tabla").style.visibility = "visible";
-	document.getElementById("tabla").style.marginLeft = "25%";
-	document.getElementById("tabla").style.top = "28%";
-	document.getElementsByTagName("UL")[0].style.visibility = "hidden";
-	document.getElementById("ranking").style.visibility = "visible";
-
-	nombre();
+//Cuando estan todas las cartas boca arriba, salga un mensaje de que ya has acabado.
+function complet(){
+  	var y = document.getElementsByClassName("frontFlip").length;
+    var total = document.getElementsByClassName("flip").length;
+	if(y==total){
+		alert("Has acabat!")
+		clearInterval(timer);
+		eSubmit();
+	};
 }
 
 //Reinicia la pagina con los valores predeterminados.
@@ -76,19 +98,64 @@ function restart(){
 	location.reload(true);
 }
 
-//Cuando estan todas las cartas boca arriba, salga un mensaje de que ya has acabado.
-function complet(){
-	var x = document.getElementById("tabla");
-    var y = x.getElementsByClassName("frontFlip").length;
-	if(y==12){alert("Has acabat!")};
+function eSubmit(){
+	document.forms["esubmit"].submit();
 }
 
-//Introducir el nombre.
-function nombre(){
-	var person= prompt("Introduce tu nombre: ");
-	if(person!=null){
-		document.getElementById("name").value = person;
-		document.getElementById("nm").innerHTML = person;
+function rSubmit(){
+	document.forms["rsubmit"].submit();
+}
+
+function help(){
+
+	var cHelp = document.getElementById("ayuda").innerHTML;//Obtiene el valor del objeto.
+	if(cHelp > 0){
+   		
+   		var frontArr = document.getElementsByClassName("front");
+   		var backArr = document.getElementsByClassName("back"); 
+
+   		//Un bucle que mientra haya un numero mayor de cartas boca abajo continua.
+   		while(frontArr.length > 0){
+   			
+   			//Gira las cartas. 
+   			frontArr[0].className = "frontFlip";
+   			backArr[0].className = "backFlip";
+   		}
+
+   		setTimeout(help2, 3000);
+
+   		cHelp--;
+
+   		//suma 5 a los movimientos
+   		mov = mov + 5;
+		printInt(mov);
+		document.getElementById("ayuda").innerHTML = cHelp;
+	}else{
+		alert("No puedes pedir mas ayudas")
+	}
+	
+}
+
+
+function help2(){
+	var fFlipArr = document.getElementsByClassName("frontFlip");
+	var bFlipArr = document.getElementsByClassName("backFlip");
+	var allCards = document.getElementsByClassName("backFlip").length;//cuenta todas las cartas que se muestran.
+	var count=0; //contador
+	var nextCard=0; //variable que sirve para ir a la sigiente carta si la anterior tiene el valor true en el atributo.
+
+	while(allCards > count){
+		//coje el valor del atributo fixed de la sigiente carta.
+		var atrib = document.getElementsByClassName("backFlip")[nextCard].getAttribute("fixed");
+
+		//compara el valor del atributo.
+		if(atrib == null){
+			//das la vuelta a la carta.
+			fFlipArr[nextCard].className = "front";
+ 	 		bFlipArr[nextCard].className = "back"
+ 	 	}else{
+ 	 		nextCard++
+ 	 	}
+ 	 	count++;
 	}
 }
-		    

@@ -1,51 +1,222 @@
-.flip{
-	position: relative;
-	width: 150px;
-	height: 150px; 
-}
-
-.flip > .front{
-		position: absolute; -webkit-transform: perspective(600px) rotateY(0deg);
-		transform: perspective(600px) rotateY(0deg);
-		background #fCO; width: 150px;height: 150px; border-radius: 7px;
-		-webkit-backface-visibility: hidden;
-		backface-visibility: hidden;
-		transition: webkit-transform .5s linear 0s;
-		transition: transform .5s linear 0s;
-}
-
-.flip > .back{
-		position: absolute; -webkit-transform: perspective(600px) rotateY(180deg);
-		transform: perspective(600px) rotateY(180deg);
-		background #fCO; width: 150px;height: 150px; border-radius: 7px;
-		-webkit-backface-visibility: hidden;
-		backface-visibility: hidden;
-		transition: webkit-transform .5s linear 0s;
-		transition: transform .5s linear 0s;
-}
-
-.flip > .frontFlip{
-		position: absolute; -webkit-transform: perspective(600px) rotateY(-180deg);
-		transform: perspective(600px) rotateY(-180deg);
-		background #fCO; width: 150px;height: 150px; border-radius: 7px;
-		-webkit-backface-visibility: hidden;
-		backface-visibility: hidden;
-		transition: webkit-transform .5s linear 0s;
-		transition: transform .5s linear 0s;
-}
-
-.flip > .backFlip{
-		position: absolute; -webkit-transform: perspective(600px) rotateY(0deg);
-		transform: perspective(600px) rotateY(0deg);
-		background #fCO; width: 150px;height: 150px; border-radius: 7px;
-		-webkit-backface-visibility: hidden;
-		backface-visibility: hidden;
-		transition: webkit-transform .5s linear 0s;
-		transition: transform .5s linear 0s;
-}
+body{ 
+	 background: url("../img/background.gif");  
+} 
 
 img{
 	position: relative;
-	top: -5px;
+	top: 0px;	
 }
 
+#table table{
+	position: relative;
+	top: 80px;
+	height: auto;
+	margin: auto;
+}
+
+#play{
+	position: relative;
+	width: 80px;
+	height: 80px;
+	top: -8%;
+	left: 43%; 
+	visibility: visible;
+}
+
+p{
+	color: #fff;
+    text-shadow: 0 0 15px #000, 0 0 15px #000;
+	width: auto;
+	height: auto;
+}
+
+.name{
+	position: relative;
+	left: 8px;
+	top: 1px;
+	width: 40px;
+	font-size: 12px;
+}
+
+.vName{
+	text-align: center;
+	position: relative;
+	top: -14px;
+	font-size: 20px;
+}
+
+
+#block{
+	position: absolute;
+	width: 42%;
+	height: 550px;
+	z-index: 1000;
+	left: 29%;
+	border-radius: 25px;
+	top: 120px;
+}
+
+#demo {
+  width: 170px;
+  height: 50px;
+  background: #2908f5;
+  position: relative;
+  border-radius: 2px;
+  left: 8%
+}
+
+#demo:before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 85px;
+  border-top: 15px solid #04449B;
+  border-left: 12px solid #2908f5;
+  width: 108px;
+}
+
+.bevel, .content { border-width: 15px; padding-top: 10px; padding-bottom: 20px;} 
+.bevel, .content { border-color: #04449B;  border-style:solid;} 
+.bvc { 
+    width: 15%;  
+	position: absolute;
+	height: auto;
+	left: 100px;
+	top: 100px;
+	padding-left: 25px;
+	padding-bottom: 13px;
+ } 
+ .bvc .tr, .bvc .tl, .bvc .br, .bvc .bl { height: 0px; width: 100%;} 
+ .bvc .tr, .bvc .tl { border-top: 0; } 
+ .bvc .br, .bvc .bl { border-bottom: 0; } 
+ .bvc .tr, .bvc .br { border-right-color: transparent; } 
+ .bvc .tl, .bvc .bl { border-left-color:transparent; } 
+ .content { 
+     background:#04449B; 
+	 height: auto; 
+     width: 100%; 
+ } 
+ 
+ .buttons{
+	 position: relative;
+	 float: right;
+	 width: 25%;
+	 top: -400px;
+	 height: 50px;
+	 right: 3%;
+ }
+ 
+ .bStyle{
+	 width: 50px;
+	 height: 50px;
+	 margin: 10px;
+ }
+ 
+ .bStyle:hover{
+	 cursor: pointer
+ }
+
+ul{
+	margin-top: 10%;
+}
+
+ li{
+	padding-top: 15px;
+	text-align: justify-all;
+	color: white;
+}
+
+#pie{
+	margin-top: 9%;
+	text-align: center;
+}
+
+h1{
+	color: white;
+	text-align: center;
+	position: relative;
+	border-top-style: solid;
+ 	border-right-style: solid;
+  	border-bottom-style: solid;
+  	border-left-style: solid;
+  	padding: 5px;
+}
+
+.ftabla{
+	width: 25%;
+	height: 25%;
+	left: 37.5%;
+	top: 20%;
+	position: absolute;
+	background-color: white;
+	text-align: center;
+	opacity: 0.5;
+
+}
+
+form{
+	position: relative;
+	text-align: center;
+	top: 60px;
+}
+
+
+#esubmit, #rsubmit{
+	visibility: hidden;
+	z-index: -100;
+	width: 0px;
+	height: 0px;
+	top: 0px;
+	position: absolute;
+}
+
+#mundial{
+	color: black;
+	position: relative;
+	text-align: center;
+	margin: auto;
+	margin-left: 15%;
+	margin-top: 2%;
+	height: auto;
+	float: left;
+	background-color: white;
+	opacity: 0.5;
+	border-radius: 10px;
+	padding: 5px 5px 5px 5px;
+}
+
+#ranking{
+	position: relative;
+	margin: auto;
+	margin-left: 20%;
+	margin-top: 8%;
+}
+
+#personal{
+	color: black;
+	position: relative;
+	text-align: center;
+	margin: auto;
+	margin-left: 50%;
+	margin-top: 2%;
+	height: auto;
+	background-color: white;
+	opacity: 0.5;
+	border-radius: 10px;
+	padding: 5px 5px 5px 5px;
+}
+
+#ranking2{
+	position: relative;
+	margin: auto;
+	margin-left: 52%;
+	margin-top: -1%;
+}
+
+th{
+	border-bottom: 2px solid blue;
+}
+
+.colum1{
+	text-align: left;
+}
