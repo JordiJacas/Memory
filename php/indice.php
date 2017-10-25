@@ -15,7 +15,7 @@
 		$array = array('mago.jpg', 'mago.jpg','obelix.jpg', 'obelix.jpg', 'slifer.jpg', 'slifer.jpg', 'ra.jpg', 'ra.jpg', 'craneo.jpg', 'craneo.jpg', 'dragon.jpg', 'dragon.jpg');
 		shuffle($array);
 
-	    echo "<table>";
+	    echo "<table align='center'>";
 
 	    for( $i=1; $i<=$filas; $i++ ) { 
 	        echo "<tr>";
