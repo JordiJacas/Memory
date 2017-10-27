@@ -8,6 +8,7 @@ var timer;
 function cron(){
 	document.getElementById("time").innerHTML = time + " s";
 	document.getElementsByName("times")[0].value = time;
+	document.getElementsByName("rtimes")[0].value = time;
 	time++;
 }
 
@@ -15,7 +16,7 @@ function start(){
 	timer = setInterval(cron, 1000);
 	document.getElementById("block").style.visibility = "hidden";
 	document.getElementById("play").style.visibility = "hidden";
-	document.getElementById("block").style.opacity = "0"
+	document.getElementById("block").style.opacity = "0";
 }
 
 //Funcion para girar la carta boca abajo que se ha seleccionado.
@@ -77,6 +78,7 @@ function nFlip(){
 function printInt(a){
     document.getElementById("mov").innerHTML = a;
     document.getElementsByName("points")[0].value = mov;
+    document.getElementsByName("rpoints")[0].value = mov;
 }
 
 //Cuando estan todas las cartas boca arriba, salga un mensaje de que ya has acabado.
@@ -88,6 +90,7 @@ function complet(){
 		clearInterval(timer);
 		eSubmit();
 	};
+}
 
 //Reinicia la pagina con los valores predeterminados.
 function restart(){
@@ -132,42 +135,12 @@ function help(){
 	}	
 }
 
-function help(){
-
-	var cHelp = document.getElementById("ayuda").innerHTML;//Obtiene el valor del objeto.
-	if(cHelp > 0){
-   		
-   		var frontArr = document.getElementsByClassName("front");
-   		var backArr = document.getElementsByClassName("back"); 
-
-   		//Un bucle que mientra haya un numero mayor de cartas boca abajo continua.
-   		while(frontArr.length > 0){
-   			
-   			//Gira las cartas. 
-   			frontArr[0].className = "frontFlip";
-   			backArr[0].className = "backFlip";
-   		}
-
-   		setTimeout(help2, 3000);
-
-   		cHelp--;
-
-   		//suma 5 a los movimientos
-   		mov = mov + 5;
-		printInt(mov);
-		document.getElementById("ayuda").innerHTML = cHelp;
-	}else{
-		alert("No puedes pedir mas ayudas")
-	}
-	
-}
-
 function help2(){
 	var fFlipArr = document.getElementsByClassName("frontFlip");
 	var bFlipArr = document.getElementsByClassName("backFlip");
 	var allCards = document.getElementsByClassName("backFlip").length;//cuenta todas las cartas que se muestran.
 	var count=0; //contador
-	var nextCard=0; //variable que sirve para ir a la sigiente carta si la anterior tiene el valor true en el atributo.
+	var nextCard=0; //variable que sirve para ir a la siguiente carta si la anterior tiene el valor true en el atributo.
 
 	while(allCards > count){
 		//coje el valor del atributo fixed de la sigiente carta.

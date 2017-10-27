@@ -132,8 +132,10 @@ echo "</table>";
 	<input type="text" name="times" value="0"/>
 </form>
 
-<form action="ranking.php" method="post" id="rsubmit">
+<form action="ranking.php" method="post" id="rsubmit" target="_blank">
 	<?php echo "<input type='text' name='nameRanking' value='".$name."'/>"?>
+	<input type="text" name="rpoints" value="0"/>
+	<input type="text" name="rtimes" value="0"/>
 </form>
 
 </body>
